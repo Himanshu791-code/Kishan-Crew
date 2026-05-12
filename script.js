@@ -580,6 +580,21 @@ function selectLoginRole(role) {
   }
 
   selectedRole = role;
+  const idLabel = document.getElementById('idFieldLabel');
+const idInput = document.getElementById('lf-id');
+
+if(role === 'farmer'){
+
+    idLabel.textContent = '🌾 Kisan ID / Aadhar No.';
+    idInput.placeholder = 'Enter your Kisan ID / Aadhar no.';
+
+}
+else{
+
+    idLabel.textContent = '🪪 Aadhar Number';
+    idInput.placeholder = 'Enter your Aadhar Number';
+
+}
   // Highlight selected role row
   const rowEl = document.getElementById('role-row-' + role);
   if(rowEl) rowEl.classList.add('selected');
